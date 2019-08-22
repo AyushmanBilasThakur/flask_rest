@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return jsonify({"test": True})
 
-@app.route('/predict', methods = ['POST'])
+@app.route('/post', methods = ['POST'])
 def predict():
     val = request.json['namequery']
     return jsonify({"yo_sent": val})
